@@ -11,13 +11,10 @@ project "App"
    {
       "Source",
 
-	  "../Raylib/Source"
+	  "../Vendor/RaylibInclude"
    }
 
-   links
-   {
-      "Raylib"
-   }
+
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
@@ -25,7 +22,16 @@ project "App"
    filter "system:windows"
        systemversion "latest"
        defines { "WINDOWS" }
-
+	   links
+	   {
+		  "../Vendor/raylib.lib",
+		  "opengl32.lib",
+		  "kernel32.lib",
+		  "user32.lib",
+		  "gdi32.lib",
+		  "winmm.lib"
+	   }
+   
    filter "configurations:Debug"
        defines { "DEBUG" }
        runtime "Debug"

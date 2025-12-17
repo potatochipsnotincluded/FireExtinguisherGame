@@ -9,6 +9,5 @@ workspace "ThreeDays"
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
-include "Raylib/Build-Raylib.lua"
 
 include "App/Build-App.lua"

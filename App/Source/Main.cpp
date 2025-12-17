@@ -9,6 +9,8 @@ int main()
 
     Vector2 ballPosition = { (float)screenWidth / 2, (float)screenHeight / 2 };
 
+	SetTargetFPS(60);
+
     while (!WindowShouldClose())
     {
         if (IsKeyDown(KEY_RIGHT)) ballPosition.x += 2.0f;
