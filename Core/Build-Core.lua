@@ -1,31 +1,35 @@
-project "App"
-   kind "ConsoleApp"
+project "Core"
+   kind "StaticLib"
    language "C++"
    cppdialect "C++23"
    targetdir "Binaries/%{cfg.buildcfg}"
    staticruntime "off"
 
-   files { "Source/**.h", "Source/**.cpp" }
+   files { "Source/**.h", "Source/**.cpp"}
 
    includedirs
    {
       "Source",
-
-	  "../Vendor/RaylibInclude",
-	  "../Core/Source"
+	 "../Vendor/RaylibInclude"
    }
-
-	links
-	{
-		"Core"
-	}
 
    targetdir ("../Binaries/" .. OutputDir .. "/%{prj.name}")
    objdir ("../Binaries/Intermediates/" .. OutputDir .. "/%{prj.name}")
 
    filter "system:windows"
        systemversion "latest"
-       defines { "WINDOWS" }
+       defines { }
+	   links
+	   {
+		  "../Vendor/raylibdll.lib",
+		  "opengl32.lib",
+		  "kernel32.lib",
+		  "user32.lib",
+		  "gdi32.lib",
+		  "winmm.lib"
+	   }
+	   
+	   
    filter "configurations:Debug"
        defines { "DEBUG" }
        runtime "Debug"
