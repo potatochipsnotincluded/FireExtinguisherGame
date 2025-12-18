@@ -29,7 +29,11 @@ project "Core"
 		  "winmm.lib"
 	   }
 	   
-	   
+	filter "system:macosx"
+		links
+		{
+			"../Vendor/libraylib.a"
+		}
    filter "configurations:Debug"
        defines { "DEBUG" }
        runtime "Debug"
