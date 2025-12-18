@@ -6,12 +6,12 @@ int main()
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     InitWindow(1260, 720, "raylib [core] example - input keys");
 
-	Core::UI::UIFont roboto = Core::UI::LoadFont("Fonts/Roboto/Roboto-Regular.ttf", 50);
-    Core::UI::UIFont robotoBold = Core::UI::LoadFont("Fonts/Roboto/Roboto-Bold.ttf", 50);
+	Core::UI::UIFont roboto = Core::UI::LoadFont("/Fonts/Roboto/Roboto-Regular.ttf", 50);
+    Core::UI::UIFont robotoBold = Core::UI::LoadFont("/Fonts/Roboto/Roboto-Bold.ttf", 50);
 
     Core::UI::SetActiveFont(robotoBold);
 
-    Texture2D player = LoadTexture("Art/player.png");
+    Texture2D player = Core::UI::LoadFileTexture("/Art/player.png");
     SetTextureFilter(player, TEXTURE_FILTER_BILINEAR);
 
     Vector2 position = { 500, 500 };

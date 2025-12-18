@@ -3,7 +3,9 @@ workspace "ThreeDays"
    architecture "x64"
    configurations { "Debug", "Release", "Dist" }
    startproject "App"
-
+   
+    filter "configurations:*"
+        defines { 'SOLUTION_DIR="' .. os.getcwd() .. '"' }  -- or wks.location
    filter "system:windows"
       buildoptions { "/EHsc", "/Zc:preprocessor", "/Zc:__cplusplus" }
 

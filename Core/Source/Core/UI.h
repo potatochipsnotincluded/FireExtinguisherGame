@@ -30,8 +30,9 @@ namespace Core {
 		inline void SetActiveFont(const UIFont& font) {
 			activeFont = font;
 		}
-
-		UIFont LoadFont(std::filesystem::path filepath, float desiredFontSize);
+        
+        Texture2D LoadFileTexture(const std::string& filepath);
+		UIFont LoadFont(const std::string& filepath, float desiredFontSize);
 
 		Vector2 AlignmentToPosition(Vector2 alignment);
 

@@ -32,7 +32,14 @@ project "Core"
 	filter "system:macosx"
 		links
 		{
-			"../Vendor/libraylib.a"
+			"../Vendor/libraylib.a",
+                    "Cocoa.framework",
+        "IOKit.framework",
+        "CoreVideo.framework",
+        "CoreAudio.framework",
+        "AudioToolbox.framework",
+        "AudioUnit.framework",
+        "OpenGL.framework"
 		}
    filter "configurations:Debug"
        defines { "DEBUG" }

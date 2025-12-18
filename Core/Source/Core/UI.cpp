@@ -3,11 +3,15 @@
 namespace Core {
 
 	namespace UI {
-
-		UIFont LoadFont(std::filesystem::path filepath, float desiredFontSize)
+        
+        Texture2D LoadFileTexture(const std::string& filepath)
+        {
+            return LoadTexture((SOLUTION_DIR + filepath).c_str());
+        }
+		UIFont LoadFont(const std::string& filepath, float desiredFontSize)
 		{
 			UIFont font;
-			font.RaylibFont = LoadFontEx(filepath.string().c_str(), desiredFontSize * fontScale, nullptr, 0);
+			font.RaylibFont = LoadFontEx((SOLUTION_DIR + filepath).c_str(), desiredFontSize * fontScale, nullptr, 0);
 			font.Size = desiredFontSize;
 
 			return font;

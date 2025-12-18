@@ -1,0 +1,381 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A7DAC6A1E7CF5DCA3680AAA /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E0E03F2B221D524A5F35A32 /* AudioToolbox.framework */; };
+		7126958CC7B3FFFEA02D13CC /* Main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E684C9F4E9F59C266B624034 /* Main.cpp */; };
+		713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BACC980CF188B320DBC2FC0 /* IOKit.framework */; };
+		840EA602F136B474F2C9A442 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19352E0A6698243CDCB7244A /* OpenGL.framework */; };
+		89BBB74E2BA5534022CC658E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAF1596EDD2694874E0BBD6 /* CoreAudio.framework */; };
+		9223EFD8340D8BCA2B349E18 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606C44802E8F9832B59DEAC0 /* CoreVideo.framework */; };
+		9C867149E525AF7B08516789 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4D0F918B447D83F747FDD1 /* libCore.a */; };
+		CAC18D7C6CAB296E63D23BBC /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E7F5DE45CA2B196E3B10424 /* AudioUnit.framework */; };
+		F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FD6DAC455FD0A76BD040104 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1D9F5FD2899276BC4F035 /* ../Core/Core.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F8A54BE8E30A8B0E77202FE;
+			remoteInfo = libCore.a;
+		};
+		DD9C682B03C297DD6AC98E6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67B1D9F5FD2899276BC4F035 /* ../Core/Core.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B1217D80E82EA0A8FEF8E18;
+			remoteInfo = libCore.a;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0BACC980CF188B320DBC2FC0 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		19352E0A6698243CDCB7244A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1FAF1596EDD2694874E0BBD6 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		606C44802E8F9832B59DEAC0 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		67B1D9F5FD2899276BC4F035 /* libCore.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Core.xcodeproj"; path = ../Core/Core.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6E0E03F2B221D524A5F35A32 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		84E0B32AD4F447DC5772796A /* App */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = App; path = App; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		8E7F5DE45CA2B196E3B10424 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
+		E684C9F4E9F59C266B624034 /* Main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Main.cpp; path = Source/Main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8F3A39AB4E4AF4C071C49DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8E8DBA28B76A594F44F49E2 /* Cocoa.framework in Frameworks */,
+				713678D803C442CA6C9CE718 /* IOKit.framework in Frameworks */,
+				9223EFD8340D8BCA2B349E18 /* CoreVideo.framework in Frameworks */,
+				89BBB74E2BA5534022CC658E /* CoreAudio.framework in Frameworks */,
+				2A7DAC6A1E7CF5DCA3680AAA /* AudioToolbox.framework in Frameworks */,
+				CAC18D7C6CAB296E63D23BBC /* AudioUnit.framework in Frameworks */,
+				840EA602F136B474F2C9A442 /* OpenGL.framework in Frameworks */,
+				9C867149E525AF7B08516789 /* libCore.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA364286569902B8152178C6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		70DA1C0B6A401D7D5DDB7A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A4D0F918B447D83F747FDD1 /* libCore.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				67B1D9F5FD2899276BC4F035 /* Core.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84E0B32AD4F447DC5772796A /* App */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF76781A7E87333FA200DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D6BC6AA50D7885C8F7B2CEA /* Cocoa.framework */,
+				0BACC980CF188B320DBC2FC0 /* IOKit.framework */,
+				606C44802E8F9832B59DEAC0 /* CoreVideo.framework */,
+				1FAF1596EDD2694874E0BBD6 /* CoreAudio.framework */,
+				6E0E03F2B221D524A5F35A32 /* AudioToolbox.framework */,
+				8E7F5DE45CA2B196E3B10424 /* AudioUnit.framework */,
+				19352E0A6698243CDCB7244A /* OpenGL.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E1231441EC53C43345F64281 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E684C9F4E9F59C266B624034 /* Main.cpp */,
+				BBF76781A7E87333FA200DC1 /* Frameworks */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+				9D968EAA920D05DCE0E0A4EA /* Projects */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D69CDD056249442E5BBCC10 /* App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B72EEBF9A31FF7ABF5579239 /* Build configuration list for PBXNativeTarget "App" */;
+			buildPhases = (
+				38DB243A24CC2FEC7703CA7A /* Resources */,
+				A2883D918E794943E0B0E3D1 /* Sources */,
+				C8F3A39AB4E4AF4C071C49DA /* Frameworks */,
+				AA364286569902B8152178C6 /* Embed Libraries */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E92591457F85A864B93B754 /* PBXTargetDependency */,
+			);
+			name = App;
+			productInstallPath = "$(HOME)/bin";
+			productName = App;
+			productReference = 84E0B32AD4F447DC5772796A /* App */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "App" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = E1231441EC53C43345F64281 /* App */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 70DA1C0B6A401D7D5DDB7A4B /* Products */;
+					ProjectRef = 67B1D9F5FD2899276BC4F035 /* Core.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				1D69CDD056249442E5BBCC10 /* App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9A4D0F918B447D83F747FDD1 /* libCore.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCore.a;
+			remoteRef = DD9C682B03C297DD6AC98E6B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38DB243A24CC2FEC7703CA7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2883D918E794943E0B0E3D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7126958CC7B3FFFEA02D13CC /* Main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E92591457F85A864B93B754 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libCore.a;
+			targetProxy = 2FD6DAC455FD0A76BD040104 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		093B571D734DD90F0C78C55D /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SOLUTION_DIR=\\\"/Users/aarontabuchi/FireExtinguisherGame\\\"",
+					DIST,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../Vendor,
+				);
+				OBJROOT = "../Binaries/Intermediates/macosx-x86_64/Dist/App";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lraylib",
+				);
+				SYMROOT = "../Binaries/macosx-x86_64/Dist/App";
+				USER_HEADER_SEARCH_PATHS = (
+					Source,
+					../Vendor/RaylibInclude,
+					../Core/Source,
+				);
+			};
+			name = Dist;
+		};
+		5EFCF42AAF1088DC318EBA6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SOLUTION_DIR=\\\"/Users/aarontabuchi/FireExtinguisherGame\\\"",
+					RELEASE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../Vendor,
+				);
+				OBJROOT = "../Binaries/Intermediates/macosx-x86_64/Release/App";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lraylib",
+				);
+				SYMROOT = "../Binaries/macosx-x86_64/Release/App";
+				USER_HEADER_SEARCH_PATHS = (
+					Source,
+					../Vendor/RaylibInclude,
+					../Core/Source,
+				);
+			};
+			name = Release;
+		};
+		69A5DDF016089E22D4911430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++23";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"SOLUTION_DIR=\\\"/Users/aarontabuchi/FireExtinguisherGame\\\"",
+					DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					../Vendor,
+				);
+				OBJROOT = "../Binaries/Intermediates/macosx-x86_64/Debug/App";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lraylib",
+				);
+				SYMROOT = "../Binaries/macosx-x86_64/Debug/App";
+				USER_HEADER_SEARCH_PATHS = (
+					Source,
+					../Vendor/RaylibInclude,
+					../Core/Source,
+				);
+			};
+			name = Debug;
+		};
+		A1C764F9B8DA002BA8F5FB39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../Binaries/macosx-x86_64/Release/App";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = App;
+			};
+			name = Release;
+		};
+		A51BBE3F4809E4F1D72FC47F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../Binaries/macosx-x86_64/Debug/App";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = App;
+			};
+			name = Debug;
+		};
+		C5E853AC37736C1EE67491EC /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../Binaries/macosx-x86_64/Dist/App";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = App;
+			};
+			name = Dist;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69A5DDF016089E22D4911430 /* Debug */,
+				5EFCF42AAF1088DC318EBA6A /* Release */,
+				093B571D734DD90F0C78C55D /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B72EEBF9A31FF7ABF5579239 /* Build configuration list for PBXNativeTarget "App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A51BBE3F4809E4F1D72FC47F /* Debug */,
+				A1C764F9B8DA002BA8F5FB39 /* Release */,
+				C5E853AC37736C1EE67491EC /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

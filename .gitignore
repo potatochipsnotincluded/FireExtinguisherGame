@@ -1,6 +1,11 @@
 # Directories
 .vs/
 Binaries/
+*.xcworkspace
+*.xcodeproj/  # Xcode project folder
+DerivedData/
+*.xcuserdata/
+*.xcshareddata/
 
 # Files
 *.vcxproj
@@ -9,6 +14,10 @@ Binaries/
 *.sln
 *.log
 Makefile
+*.hmap
+*.ipa
+*.app.dSYM
+*.app  # macOS application bundle
 
-# Exclude
+# Exclude Vendor binaries (keep in repo)
 !Vendor/Binaries
