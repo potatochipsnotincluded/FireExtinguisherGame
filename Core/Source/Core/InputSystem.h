@@ -8,6 +8,8 @@
 
 namespace Core {
 
+	using ActionID = uint32_t;
+
 	struct InputBinding
 	{
 		bool isPressed;
@@ -15,6 +17,7 @@ namespace Core {
 		bool wasJustReleased;
 
 		std::vector<int32_t> keyCodes;
+		std::vector<int32_t> mouseCodes;
 	};
 
 	class InputSystem
@@ -24,15 +27,16 @@ namespace Core {
 
 		void Poll();
 
-		void BindInput(const std::string& actionName, int32_t keyCode); // Must use const string& instead of string_view due to unordered_map key requirement.
+		ActionID BindKeyInput(const std::string& actionName, int32_t keyCode); // Must use const string& instead of string_view to make it easier to hash
+		ActionID BindMouseInput(const std::string& actionName, int32_t mouseCode);
 
-		bool IsPressed(const std::string& actionName);
-		bool WasJustPressed(const std::string& actionName);
-		bool WasJustReleased(const std::string& actionName);
+		bool IsPressed(ActionID actionName);
+		bool WasJustPressed(ActionID actionName);
+		bool WasJustReleased(ActionID actionName);
 
 	private:
-		std::unordered_map<std::string, InputBinding> bindings;
-	};
+		std::unordered_map<ActionID, InputBinding> bindings;
+	}; 
 
 	inline std::shared_ptr<InputSystem> g_InputSystem;
 

@@ -1,5 +1,16 @@
 #include "InputSystem.h"
 
+uint32_t HashName(const std::string& str)
+{
+	uint32_t hash = 2166136261u; // FNV offset basis
+	for (char c : str)
+	{
+		hash ^= static_cast<uint8_t>(c);
+		hash *= 16777619u;       // FNV prime
+	}
+	return hash;
+}
+
 namespace Core {
 
 	InputSystem::InputSystem()
@@ -21,6 +32,13 @@ namespace Core {
 				pressed |= IsKeyPressed(code);
 				released |= IsKeyReleased(code);
 			}
+			
+			for (int32_t code : it->second.mouseCodes)
+			{
+				down |= IsMouseButtonDown(code);
+				pressed |= IsMouseButtonPressed(code);
+				released |= IsMouseButtonReleased(code);
+			}
 
 			it->second.isPressed = down;
 			it->second.wasJustPressed = pressed;
@@ -28,9 +46,9 @@ namespace Core {
 		}
 	}
 
-	void InputSystem::BindInput(const std::string& actionName, int32_t keyCode)
+	ActionID InputSystem::BindKeyInput(const std::string& actionName, int32_t keyCode)
 	{
-		const std::string& name = actionName;
+		ActionID name = HashName(actionName);
 
 		if (bindings.find(name) == bindings.end())
 		{
@@ -39,19 +57,36 @@ namespace Core {
 		}
 
 		bindings[name].keyCodes.push_back(keyCode);
+
+		return name;
 	}
 
-	bool InputSystem::IsPressed(const std::string& actionName)
+	ActionID InputSystem::BindMouseInput(const std::string& actionName, int32_t mouseCode)
+	{
+		ActionID name = HashName(actionName);
+
+		if (bindings.find(name) == bindings.end())
+		{
+			InputBinding binding{};
+			bindings[name] = binding;
+		}
+
+		bindings[name].mouseCodes.push_back(mouseCode);
+
+		return name;
+	}
+
+	bool InputSystem::IsPressed(ActionID actionName)
 	{
 		return bindings[actionName].isPressed;
 	}
 
-	bool InputSystem::WasJustPressed(const std::string& actionName)
+	bool InputSystem::WasJustPressed(ActionID actionName)
 	{
 		return bindings[actionName].wasJustPressed;
 	}
 
-	bool InputSystem::WasJustReleased(const std::string& actionName)
+	bool InputSystem::WasJustReleased(ActionID actionName)
 	{
 		return bindings[actionName].wasJustReleased;
 	}
